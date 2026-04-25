@@ -18,7 +18,7 @@ messages = [
     }
 ]
 response = chat(
-    model="qwen:0.5b", messages=messages
+    model="qwen:0.5b", messages=messages, options={"temperature":1.5}
 )
 
 print("The model response is: ")

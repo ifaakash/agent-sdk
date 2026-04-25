@@ -8,5 +8,6 @@ echo "Calling curl endpoint for qwen: "
 curl $base_endpoint \
    -d '{
    	"model": "qwen:0.5b",
-    "messages": [{"role": "user", "content": "Hello!"}]
+    "messages": [{"role": "user", "content": "Hello!"}],
+    "stream": false
    }'

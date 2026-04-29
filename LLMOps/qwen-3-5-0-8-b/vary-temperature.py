@@ -29,7 +29,7 @@ for temp in temperatures:
     payload= {
         'model': MODEL,
         'prompt': PROMPT,
-        'format': "json",
+       #  'format': "json",
         'options': {
             "temperature": temp,
             "top_p": 0.9,

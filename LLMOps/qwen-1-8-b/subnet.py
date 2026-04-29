@@ -13,7 +13,7 @@ import time
 OLLAMA_URL="http://localhost:11434/api/generate"
 MODEL="qwen:1.8b"
 PROMPT= input("Enter Prompt: ")
-temperature= ["0.7"]
+temperature= [0.7]
 # context window of 8000 token ( 6000 words )
 CTXW= 8000
 print(f"Testing Model: {MODEL}\nPrompt: '{PROMPT}'\n" + "-"*50)

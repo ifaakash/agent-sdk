@@ -1,1 +1,1 @@
-AWS public subnet has internet access
+A public subnet is a subnet that has a route in its route table pointing to an Internet Gateway (IGW). This allows resources within the subnet, like an ALB, to communicate directly with the internet. A private subnet, on the other hand, does not have a route to the IGW. It must use a NAT Gateway to access the internet.

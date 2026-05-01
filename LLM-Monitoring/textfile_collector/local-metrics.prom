@@ -1,7 +1,7 @@
 # HELP pi5_cpu_temperature_celsius Local CPU temperature of the Pi 5
 # TYPE pi5_cpu_temperature_celsius gauge
-pi5_cpu_temperature_celsius 49.8'C
+pi5_cpu_temperature_celsius 49.8
 
 # HELP custom_random_value A generated random value for testing
 # TYPE custom_random_value gauge
-custom_random_value 5GB
+custom_random_value 5

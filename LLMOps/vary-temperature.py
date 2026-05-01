@@ -32,6 +32,7 @@ for temp in temperatures:
             "temperature": temp,
             "top_p": 0.9
         },
+        "keep_alive" : "15m",
         "stream": False
     }
     start_time = time.time()

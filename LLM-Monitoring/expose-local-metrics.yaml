@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  node_exporter:
+    image: prom/node-exporter:latest
+    container_name: node_exporter
+    restart: unless-stopped
+    ports:
+      - "9100:9100"
+    volumes:
+      # ONLY mount the host's /proc directory
+      - /proc:/host/proc:ro
+      - ./local-metrics.prom:/host/custom_metrics:ro
+    command:
+          # Tell Node Exporter where the host /proc is
+          - '--path.procfs=/host/proc'
+          
+          # OPTIONAL BUT RECOMMENDED: Turn off everything else to save resources
+          - '--collector.disable-defaults'
+          - '--collector.meminfo'   # Gets your RAM metrics
+          - '--collector.cpu'       # Gets your CPU metrics
+          - '--collector.loadavg'   # Gets system load averages
+          - '--collector.stat'      # Gets basic system stats (boot time, etc.)
+          - '--collector.textfile.directory=/host/custom_metrics'
